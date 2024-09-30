@@ -28,6 +28,112 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  background-color: #1a1a1a;
-  padding: 0 3em 3em 3em;
+  background-color: #050505;
+  font-family: "Lato", system-ui, sans-serif;
+}
+
+header {
+  min-height: 100vh;
+  position: relative;
+  padding: 1.6rem 0;
+}
+header .right-background {
+  background: linear-gradient(90deg, #050505 15%, rgba(0, 0, 0, 0) 100%), url("../../images/hero-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 35%;
+  z-index: -1;
+}
+@media only screen and (max-width: 56.25em) {
+  header .right-background {
+    left: 15%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  header .right-background {
+    left: 5%;
+    background-position: center;
+  }
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  background-color: #050505;
+  margin: 0 6em;
+  color: #fff;
+  min-height: 5rem;
+  padding: 0.7rem 0.7rem 0.7rem 3rem;
+  border: 1px solid #008aff;
+  border-radius: 4rem;
+}
+header .nav ul {
+  display: flex;
+  align-self: stretch;
+  list-style: none;
+  gap: 5rem;
+  margin-left: 8rem;
+}
+header .nav ul > * {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 75em) {
+  header .nav ul {
+    margin-left: 6rem;
+  }
+}
+header .nav__link, header .nav__logo, header .nav__contact-btn {
+  text-decoration: none;
+  color: #eee;
+}
+header .nav__logo {
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+  font-size: 2.6rem;
+}
+header .nav__link {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  position: relative;
+  height: 100%;
+}
+header .nav__link::before {
+  content: "";
+  width: 0;
+  height: 0.5rem;
+  position: absolute;
+  background-color: #008aff;
+  left: 50%;
+  bottom: -0.7rem;
+  transform: translateX(-50%);
+  border-radius: 5rem;
+  transition: width 0.25s linear;
+}
+header .nav__link:hover::before {
+  width: 80%;
+}
+.active header .nav__link::before {
+  width: 80%;
+}
+header .nav__contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  margin-left: auto;
+  background-color: #008aff;
+  height: 5rem;
+  width: 18rem;
+  border-radius: 4rem;
+  letter-spacing: 1px;
+  transition: background-color 0.25s linear;
+}
+header .nav__contact-btn:hover {
+  background-color: #0074d9;
 }

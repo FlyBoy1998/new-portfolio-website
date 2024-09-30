@@ -1,12 +1,19 @@
 $color-primary: #008aff;
 $color-primary-light: #3ba4ff;
-$color-primary-dark: #007ce8;
+$color-primary-dark: #0074d9;
 
 $color-secondary: #ff7700;
 $color-secondary-dark: #c85d00;
 $color-secondary-light: #ff851b;
 
+$color-white: #fff;
+
 $color-grey-light: #eee;
 $color-grey-dark: #999;
 
-$color-dark: #1a1a1a;
+$color-dark-1: #050505;
+$color-dark-2: #1a1a1a95;
+$color-dark-transparent-1: rgba(0, 0, 0, 0.75);
+$color-dark-transparent-2: rgba(0, 0, 0, 0);
+
+$section-margin: 0 6em;
