@@ -1,0 +1,29 @@
+// .decorative-circle {
+//   width: 40rem;
+//   height: 40rem;
+//   border-radius: 50%;
+//   background-image: radial-gradient(closest-side, #00294c, $color-dark-1);
+//   position: absolute;
+//   top: 15%;
+//   z-index: -1;
+// }
+
+.decorative-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22rem;
+  width: 5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .line {
+    width: 100%;
+    height: 1rem;
+    background-color: $color-primary-dark;
+    transform: skew(0deg, 45deg);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+}
