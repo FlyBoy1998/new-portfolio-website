@@ -1,0 +1,26 @@
+{
+  "name": "new-portfolio-website",
+  "version": "1.0.0",
+  "description": "New portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --no-source-map scss:css",
+    "sass:watch": "sass --no-source-map --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlyBoy1998/new-portfolio-website.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Florin Miron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlyBoy1998/new-portfolio-website/issues"
+  },
+  "homepage": "https://github.com/FlyBoy1998/new-portfolio-website#readme",
+  "dependencies": {
+    "sass": "^1.79.4"
+  }
+}
