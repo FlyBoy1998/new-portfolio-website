@@ -67,7 +67,7 @@ header .nav {
   color: #fff;
   min-height: 5rem;
   padding: 0.7rem 0.7rem 0.7rem 3rem;
-  border: 1px solid #008aff;
+  border: 1px solid #0074d9;
   border-radius: 4rem;
 }
 header .nav ul {
@@ -94,6 +94,11 @@ header .nav__logo {
   font-family: "Exo", sans-serif;
   font-weight: 600;
   font-size: 2.6rem;
+  color: #0074d9;
+  transition: color 0.25s linear;
+}
+header .nav__logo:hover {
+  color: #3ba4ff;
 }
 header .nav__link {
   display: flex;
@@ -136,6 +141,38 @@ header .nav__contact-btn {
 }
 header .nav__contact-btn:hover {
   background-color: #0074d9;
+}
+header .hero {
+  width: 50%;
+  margin: 0 16rem;
+  margin-top: 10rem;
+}
+header .hero__profession {
+  font-size: 3.2rem;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1.3px;
+}
+header .hero__name {
+  display: flex;
+  flex-direction: column;
+  font-family: "Exo", sans-serif;
+  font-size: 12rem;
+  font-weight: 500;
+  color: #eee;
+  margin-bottom: 3.6rem;
+}
+header .hero__name span:nth-child(2) {
+  margin-top: -5rem;
+}
+header .hero__short {
+  color: #999;
+  border-left: 1px solid #999;
+  padding: 1em 2em;
+  width: 45%;
+  font-size: 1.8rem;
+  line-height: 1.4;
 }
 
 .decorative-lines {
