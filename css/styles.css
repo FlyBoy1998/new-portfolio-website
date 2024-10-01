@@ -75,27 +75,14 @@ header .nav {
   border: 1px solid #0074d9;
   border-radius: 4rem;
 }
-header .nav ul {
-  display: flex;
-  align-self: stretch;
-  list-style: none;
-  gap: 5rem;
-  margin-left: 8rem;
-}
-header .nav ul > * {
-  display: flex;
-  align-items: center;
-}
-@media only screen and (max-width: 75em) {
-  header .nav ul {
-    margin-left: 6rem;
+@media only screen and (max-width: 56.25em) {
+  header .nav {
+    padding-right: 3rem;
   }
 }
-header .nav__link, header .nav__logo, header .nav__contact-btn {
+header .nav__logo {
   text-decoration: none;
   color: #eee;
-}
-header .nav__logo {
   font-family: "Exo", sans-serif;
   font-weight: 600;
   font-size: 2.6rem;
@@ -105,7 +92,19 @@ header .nav__logo {
 header .nav__logo:hover {
   color: #3ba4ff;
 }
-header .nav__link {
+header .nav__list {
+  display: flex;
+  align-self: stretch;
+  list-style: none;
+  gap: 5rem;
+  margin-left: 8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  header .nav__list {
+    display: none;
+  }
+}
+header .nav__list--link {
   display: flex;
   align-items: center;
   font-size: 1.7rem;
@@ -113,7 +112,11 @@ header .nav__link {
   position: relative;
   height: 100%;
 }
-header .nav__link::before {
+header .nav__list--link:link, header .nav__list--link:visited {
+  text-decoration: none;
+  color: #eee;
+}
+header .nav__list--link::before {
   content: "";
   width: 0;
   height: 0.5rem;
@@ -125,11 +128,13 @@ header .nav__link::before {
   border-radius: 5rem;
   transition: width 0.25s linear;
 }
-header .nav__link:hover::before {
+header .nav__list--link:hover::before {
   width: 80%;
 }
-.active header .nav__link::before {
-  width: 80%;
+@media only screen and (max-width: 75em) {
+  header .nav__list {
+    margin-left: 6rem;
+  }
 }
 header .nav__contact-btn {
   display: flex;
@@ -144,7 +149,16 @@ header .nav__contact-btn {
   letter-spacing: 1px;
   transition: background-color 0.25s linear;
 }
-header .nav__contact-btn:hover {
+@media only screen and (max-width: 56.25em) {
+  header .nav__contact-btn {
+    display: none;
+  }
+}
+header .nav__contact-btn:link, header .nav__contact-btn:visited {
+  color: #eee;
+  text-decoration: none;
+}
+header .nav__contact-btn:hover, header .nav__contact-btn:active {
   background-color: #0074d9;
 }
 header .hero {
@@ -159,6 +173,12 @@ header .hero {
   header .hero {
     width: 70%;
     margin: 0 8em;
+    margin-top: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  header .hero {
+    margin: 0 6em;
     margin-top: 10rem;
   }
 }
@@ -280,4 +300,49 @@ header .hero__download-cv:hover::after {
   transform: skew(0deg, 45deg);
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+
+.nav__hamburger {
+  display: none;
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.25s;
+  position: relative;
+  background: transparent;
+  border: none;
+}
+@media only screen and (max-width: 56.25em) {
+  .nav__hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+.nav__hamburger--top, .nav__hamburger--middle, .nav__hamburger--bottom {
+  position: absolute;
+  width: 2.4rem;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #eee;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+.nav__hamburger--middle {
+  transform: translateY(7px);
+}
+.nav__hamburger--bottom {
+  transform: translateY(14px);
+}
+.nav__hamburger .open {
+  transform: rotate(90deg);
+}
+.open .nav__hamburger--top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+.open .nav__hamburger--middle {
+  display: none;
+}
+.open .nav__hamburger--bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
