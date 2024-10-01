@@ -1,0 +1,52 @@
+.nav__hamburger {
+  display: none;
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: all 0.25s;
+  position: relative;
+  background: transparent;
+  border: none;
+
+  @include respond(tab-port) {
+    display: block;
+    margin-left: auto;
+  }
+
+  &--top,
+  &--middle,
+  &--bottom {
+    position: absolute;
+    width: 2.4rem;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: $color-grey-light;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+
+  &--middle {
+    transform: translateY(7px);
+  }
+
+  &--bottom {
+    transform: translateY(14px);
+  }
+
+  .open {
+    transform: rotate(90deg);
+  }
+
+  .open &--top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+
+  .open &--middle {
+    display: none;
+  }
+
+  .open &--bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  }
+}
