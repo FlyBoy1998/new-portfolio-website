@@ -168,7 +168,7 @@ header {
       display: flex;
       flex-direction: column;
       font-family: "Exo", sans-serif;
-      font-size: 12rem;
+      font-size: $main-heading-large;
       font-weight: 500;
       color: $color-grey-light;
       margin-bottom: 3.6rem;
@@ -178,7 +178,7 @@ header {
       }
 
       @include respond(phone) {
-        font-size: 10rem;
+        font-size: $main-heading-medium;
       }
     }
 

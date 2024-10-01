@@ -1,4 +1,4 @@
-.decorative-circle {
+header .decorative-circle {
   width: 40rem;
   height: 40rem;
   border-radius: 50%;
@@ -39,4 +39,37 @@
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
+}
+
+#about .decorative-circle:first-of-type,
+#about .decorative-circle:nth-of-type(2) {
+  border-radius: 50%;
+  position: absolute;
+  z-index: $tertiary-layer;
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+#about .decorative-circle:first-of-type {
+  width: 50rem;
+  height: 50rem;
+  background-image: radial-gradient(
+    closest-side,
+    $color-secondary-transparent-1,
+    $color-dark-1
+  );
+  left: 0;
+  top: 30%;
+}
+
+#about .decorative-circle:nth-of-type(2) {
+  width: 60rem;
+  height: 60rem;
+  background-image: radial-gradient(
+    closest-side,
+    $color-primary-effect,
+    $color-dark-1
+  );
+  right: 0;
 }

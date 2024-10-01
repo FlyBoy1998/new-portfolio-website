@@ -299,7 +299,55 @@ header .hero__download-cv:hover::after {
   height: 5.6em;
 }
 
-.decorative-circle {
+.about {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  margin-top: 20rem;
+  padding: 0 10em;
+  width: 100%;
+}
+@media only screen and (max-width: 75em) {
+  .about {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.about__content {
+  flex: 0 1 50%;
+}
+.about__content--title {
+  display: flex;
+  flex-direction: column;
+  font-size: 12rem;
+  color: #eee;
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+  position: relative;
+  left: -35%;
+}
+.about__content--title span:nth-child(2) {
+  margin-top: -5rem;
+}
+.about__content--description {
+  font-family: "Roboto", sans-serif;
+  color: #999;
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+}
+.about__image-container {
+  height: 54rem;
+  border-radius: 50%;
+}
+.about__image-container--image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  user-select: none;
+}
+
+header .decorative-circle {
   width: 40rem;
   height: 40rem;
   border-radius: 50%;
@@ -309,12 +357,12 @@ header .hero__download-cv:hover::after {
   z-index: -1;
 }
 @media only screen and (max-width: 75em) {
-  .decorative-circle {
+  header .decorative-circle {
     top: 15%;
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .decorative-circle {
+  header .decorative-circle {
     display: none;
   }
 }
@@ -337,6 +385,34 @@ header .hero__download-cv:hover::after {
   transform: skew(0deg, 45deg);
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+
+#about .decorative-circle:first-of-type,
+#about .decorative-circle:nth-of-type(2) {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+@media only screen and (max-width: 56.25em) {
+  #about .decorative-circle:first-of-type,
+  #about .decorative-circle:nth-of-type(2) {
+    display: none;
+  }
+}
+
+#about .decorative-circle:first-of-type {
+  width: 50rem;
+  height: 50rem;
+  background-image: radial-gradient(closest-side, rgba(227, 106, 0, 0.25), #050505);
+  left: 0;
+  top: 30%;
+}
+
+#about .decorative-circle:nth-of-type(2) {
+  width: 60rem;
+  height: 60rem;
+  background-image: radial-gradient(closest-side, #00294c, #050505);
+  right: 0;
 }
 
 .nav__hamburger {
