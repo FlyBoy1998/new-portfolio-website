@@ -1,0 +1,52 @@
+.about {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  margin-top: 20rem;
+  padding: $section-padding-big;
+  width: 100%;
+
+  @include respond(tab-land) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  &__content {
+    flex: 0 1 50%;
+
+    &--title {
+      display: flex;
+      flex-direction: column;
+      font-size: $main-heading-large;
+      color: $color-grey-light;
+      font-family: "Exo", sans-serif;
+      font-weight: 500;
+      position: relative;
+      left: -35%;
+
+      span:nth-child(2) {
+        margin-top: -5rem;
+      }
+    }
+
+    &--description {
+      font-family: "Roboto", sans-serif;
+      color: $color-grey-dark;
+      line-height: 1.6;
+      letter-spacing: 1.1px;
+    }
+  }
+
+  &__image-container {
+    height: 54rem;
+    border-radius: 50%;
+
+    &--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      user-select: none;
+    }
+  }
+}
