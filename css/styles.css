@@ -6,6 +6,11 @@
   box-sizing: inherit;
 }
 
+::selection {
+  background-color: rgba(227, 106, 0, 0.4);
+  color: #eee;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -143,6 +148,7 @@ header .nav__contact-btn:hover {
   background-color: #0074d9;
 }
 header .hero {
+  position: relative;
   width: 50%;
   margin: 0 16rem;
   margin-top: 10rem;
@@ -169,10 +175,62 @@ header .hero__name span:nth-child(2) {
 header .hero__short {
   color: #999;
   border-left: 1px solid #999;
-  padding: 1em 2em;
+  padding: 0.6em 2em;
   width: 45%;
   font-size: 1.8rem;
   line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1.1px;
+}
+header .hero__download-cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 3.15em;
+  height: 3.15em;
+  border-radius: 50%;
+  background-color: #e36a00;
+  top: 25%;
+  right: 20%;
+  color: #eee;
+  font-size: 3.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.35s ease-out;
+}
+header .hero__download-cv i {
+  font-size: 2.6rem;
+}
+header .hero__download-cv::before, header .hero__download-cv::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.35s ease-out;
+}
+header .hero__download-cv::before {
+  width: 4em;
+  height: 4em;
+  background-color: rgba(227, 106, 0, 0.4);
+  z-index: -1;
+}
+header .hero__download-cv::after {
+  width: 4.8em;
+  height: 4.8em;
+  background-color: rgba(227, 106, 0, 0.15);
+  z-index: -1;
+}
+header .hero__download-cv:hover {
+  background-color: #ff851b;
+}
+header .hero__download-cv:hover::before {
+  width: 4.5em;
+  height: 4.5em;
+}
+header .hero__download-cv:hover::after {
+  width: 5.5em;
+  height: 5.5em;
 }
 
 .decorative-lines {
