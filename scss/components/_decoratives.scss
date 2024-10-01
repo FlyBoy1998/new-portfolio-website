@@ -1,14 +1,14 @@
 header .decorative-circle {
-  width: 40rem;
-  height: 40rem;
+  width: 50rem;
+  height: 50rem;
   border-radius: 50%;
   background-image: radial-gradient(
     closest-side,
-    $color-primary-effect,
+    $color-primary-blur-1,
     $color-dark-1
   );
   position: absolute;
-  top: 20%;
+  top: 15%;
   z-index: $tertiary-layer;
 
   @include respond(tab-land) {
@@ -20,7 +20,7 @@ header .decorative-circle {
   }
 }
 
-.decorative-lines {
+header .decorative-lines {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,10 +42,12 @@ header .decorative-circle {
 }
 
 #about .decorative-circle:first-of-type,
-#about .decorative-circle:nth-of-type(2) {
+#about .decorative-circle:nth-of-type(2),
+#about .decorative-circle:nth-of-type(3) {
   border-radius: 50%;
   position: absolute;
   z-index: $tertiary-layer;
+
   @include respond(tab-port) {
     display: none;
   }
@@ -56,7 +58,7 @@ header .decorative-circle {
   height: 50rem;
   background-image: radial-gradient(
     closest-side,
-    $color-secondary-transparent-1,
+    $color-secondary-blur-2,
     $color-dark-1
   );
   left: 0;
@@ -68,8 +70,20 @@ header .decorative-circle {
   height: 60rem;
   background-image: radial-gradient(
     closest-side,
-    $color-primary-effect,
+    $color-primary-blur-1,
     $color-dark-1
   );
   right: 0;
+}
+
+#about .decorative-circle:nth-of-type(3) {
+  width: 50rem;
+  height: 50rem;
+  background-image: radial-gradient(
+    closest-side,
+    $color-primary-blur-1,
+    $color-dark-1
+  );
+  top: -30%;
+  left: 30%;
 }
