@@ -7,7 +7,7 @@
 }
 
 ::selection {
-  background-color: rgba(227, 106, 0, 0.4);
+  background-color: rgba(227, 106, 0, 0.25);
   color: #eee;
 }
 
@@ -148,10 +148,19 @@ header .nav__contact-btn:hover {
   background-color: #0074d9;
 }
 header .hero {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 50%;
-  margin: 0 16rem;
+  margin: 0 10em;
   margin-top: 10rem;
+}
+@media only screen and (max-width: 56.25em) {
+  header .hero {
+    width: 70%;
+    margin: 0 8em;
+    margin-top: 10rem;
+  }
 }
 header .hero__profession {
   font-size: 3.2rem;
@@ -182,6 +191,16 @@ header .hero__short {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1.1px;
 }
+@media only screen and (max-width: 75em) {
+  header .hero__short {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  header .hero__short {
+    width: 80%;
+  }
+}
 header .hero__download-cv {
   display: flex;
   flex-direction: column;
@@ -200,6 +219,17 @@ header .hero__download-cv {
   text-decoration: none;
   transition: all 0.35s ease-out;
 }
+@media only screen and (max-width: 75em) {
+  header .hero__download-cv {
+    right: 5%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  header .hero__download-cv {
+    left: 0;
+    top: 115%;
+  }
+}
 header .hero__download-cv i {
   font-size: 2.6rem;
 }
@@ -212,7 +242,7 @@ header .hero__download-cv::before, header .hero__download-cv::after {
 header .hero__download-cv::before {
   width: 4em;
   height: 4em;
-  background-color: rgba(227, 106, 0, 0.4);
+  background-color: rgba(227, 106, 0, 0.25);
   z-index: -1;
 }
 header .hero__download-cv::after {
@@ -229,8 +259,8 @@ header .hero__download-cv:hover::before {
   height: 4.5em;
 }
 header .hero__download-cv:hover::after {
-  width: 5.5em;
-  height: 5.5em;
+  width: 5.6em;
+  height: 5.6em;
 }
 
 .decorative-lines {
