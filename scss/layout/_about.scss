@@ -35,6 +35,30 @@
       line-height: 1.6;
       letter-spacing: 1.1px;
     }
+
+    &--contact-btn {
+      display: inline-block;
+      margin-top: 5rem;
+      padding: 1em 3em;
+      border-radius: 4rem;
+      color: $color-grey-light;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      background-color: $color-primary;
+      transition: background-color 0.25s linear;
+
+      &:visited,
+      &:link {
+        text-decoration: none;
+        color: $color-grey-light;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-primary-light;
+      }
+    }
   }
 
   &__image-container {

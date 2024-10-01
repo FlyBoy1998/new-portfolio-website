@@ -112,7 +112,7 @@ header {
       justify-content: center;
       font-weight: 800;
       margin-left: auto;
-      background-color: $color-primary;
+      background-color: $color-primary-dark;
       height: 5rem;
       width: 18rem;
       border-radius: 4rem;
@@ -131,7 +131,7 @@ header {
 
       &:hover,
       &:active {
-        background-color: $color-primary-dark;
+        background-color: $color-primary-light;
       }
     }
   }
