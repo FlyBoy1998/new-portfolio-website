@@ -1,12 +1,24 @@
-// .decorative-circle {
-//   width: 40rem;
-//   height: 40rem;
-//   border-radius: 50%;
-//   background-image: radial-gradient(closest-side, #00294c, $color-dark-1);
-//   position: absolute;
-//   top: 15%;
-//   z-index: -1;
-// }
+.decorative-circle {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background-image: radial-gradient(
+    closest-side,
+    $color-primary-effect,
+    $color-dark-1
+  );
+  position: absolute;
+  top: 20%;
+  z-index: $tertiary-layer;
+
+  @include respond(tab-land) {
+    top: 15%;
+  }
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
 
 .decorative-lines {
   display: flex;
@@ -17,6 +29,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: $secondary-layer;
 
   .line {
     width: 100%;
