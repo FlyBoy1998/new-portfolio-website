@@ -2,13 +2,22 @@
   display: flex;
   gap: 5rem;
   position: relative;
-  margin-top: 20rem;
-  padding: $section-padding-big;
+  margin-top: 15rem;
+  padding: 0 $padding-large;
   width: 100%;
 
   @include respond(tab-land) {
     flex-direction: column-reverse;
     align-items: center;
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem $padding-medium 0;
+  }
+
+  @include respond(phone) {
+    padding: 10rem $padding-small 0;
+    margin-top: 0;
   }
 
   &__content {
@@ -24,8 +33,19 @@
       position: relative;
       left: -35%;
 
+      @include respond(tab-land) {
+        left: 0;
+      }
+
       span:nth-child(2) {
         margin-top: -5rem;
+      }
+
+      i {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: $color-primary;
       }
     }
 
@@ -64,6 +84,18 @@
   &__image-container {
     height: 54rem;
     border-radius: 50%;
+
+    @include respond(tab-land) {
+      height: 48rem;
+    }
+
+    @include respond(tab-port) {
+      height: 40rem;
+    }
+
+    @include respond(phone) {
+      height: 32rem;
+    }
 
     &--image {
       width: 100%;

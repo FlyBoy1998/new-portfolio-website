@@ -12,6 +12,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%;
 }
 @media only screen and (max-width: 75em) {
@@ -68,7 +69,7 @@ header .nav {
   display: flex;
   align-items: center;
   background-color: #050505;
-  margin: 0 6em;
+  margin: 0 10rem;
   color: #fff;
   min-height: 5rem;
   padding: 0.7rem 0.7rem 0.7rem 3rem;
@@ -78,6 +79,11 @@ header .nav {
 @media only screen and (max-width: 56.25em) {
   header .nav {
     padding-right: 3rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  header .nav {
+    padding: 0 1rem;
   }
 }
 header .nav__logo {
@@ -166,21 +172,25 @@ header .hero {
   flex-direction: column;
   position: relative;
   width: 100%;
-  padding: 0 10em;
-  margin-top: 10rem;
+  min-height: 75vh;
+  padding: 10rem 18rem;
+}
+@media only screen and (max-width: 75em) {
+  header .hero {
+    gap: 1.8rem;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   header .hero {
-    width: 70%;
-    margin: 0 8em;
-    padding: 0;
-    margin-top: 10rem;
+    width: 85%;
+    padding: 10rem 14rem 0;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
   header .hero {
-    margin: 0 6em;
-    margin-top: 10rem;
+    width: 100%;
+    padding: 10rem 10rem 0;
   }
 }
 header .hero__profession {
@@ -224,12 +234,12 @@ header .hero__short {
 }
 @media only screen and (max-width: 56.25em) {
   header .hero__short {
-    width: 75%;
+    width: 80%;
   }
 }
 @media only screen and (max-width: 37.5em) {
   header .hero__short {
-    width: 80%;
+    width: 100%;
   }
 }
 header .hero__download-cv {
@@ -238,11 +248,11 @@ header .hero__download-cv {
   align-items: center;
   justify-content: center;
   position: absolute;
-  width: 3.15em;
-  height: 3.15em;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   background-color: #e36a00;
-  top: 25%;
+  top: 35%;
   left: 45%;
   color: #eee;
   font-size: 3.8rem;
@@ -252,18 +262,12 @@ header .hero__download-cv {
 }
 @media only screen and (max-width: 75em) {
   header .hero__download-cv {
-    left: 50%;
+    left: 60%;
   }
 }
 @media only screen and (max-width: 56.25em) {
   header .hero__download-cv {
-    left: 70%;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  header .hero__download-cv {
-    left: 0;
-    top: 110%;
+    display: none;
   }
 }
 header .hero__download-cv i {
@@ -276,14 +280,14 @@ header .hero__download-cv::before, header .hero__download-cv::after {
   transition: all 0.35s ease-out;
 }
 header .hero__download-cv::before {
-  width: 4em;
-  height: 4em;
+  width: 15.2rem;
+  height: 15.2rem;
   background-color: rgba(227, 106, 0, 0.25);
   z-index: -1;
 }
 header .hero__download-cv::after {
-  width: 4.8em;
-  height: 4.8em;
+  width: 18.6rem;
+  height: 18.6rem;
   background-color: rgba(227, 106, 0, 0.15);
   z-index: -1;
 }
@@ -291,26 +295,37 @@ header .hero__download-cv:hover {
   background-color: #ff851b;
 }
 header .hero__download-cv:hover::before {
-  width: 4.5em;
-  height: 4.5em;
+  width: 17.2rem;
+  height: 17.2rem;
 }
 header .hero__download-cv:hover::after {
-  width: 5.6em;
-  height: 5.6em;
+  width: 22.6rem;
+  height: 22.6rem;
 }
 
 .about {
   display: flex;
   gap: 5rem;
   position: relative;
-  margin-top: 20rem;
-  padding: 0 10em;
+  margin-top: 15rem;
+  padding: 0 18rem;
   width: 100%;
 }
 @media only screen and (max-width: 75em) {
   .about {
     flex-direction: column-reverse;
     align-items: center;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .about {
+    padding: 10rem 14rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about {
+    padding: 10rem 10rem 0;
+    margin-top: 0;
   }
 }
 .about__content {
@@ -326,8 +341,19 @@ header .hero__download-cv:hover::after {
   position: relative;
   left: -35%;
 }
+@media only screen and (max-width: 75em) {
+  .about__content--title {
+    left: 0;
+  }
+}
 .about__content--title span:nth-child(2) {
   margin-top: -5rem;
+}
+.about__content--title i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #008aff;
 }
 .about__content--description {
   font-family: "Roboto", sans-serif;
@@ -358,6 +384,21 @@ header .hero__download-cv:hover::after {
   height: 54rem;
   border-radius: 50%;
 }
+@media only screen and (max-width: 75em) {
+  .about__image-container {
+    height: 48rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .about__image-container {
+    height: 40rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about__image-container {
+    height: 32rem;
+  }
+}
 .about__image-container--image {
   width: 100%;
   height: 100%;
@@ -366,7 +407,7 @@ header .hero__download-cv:hover::after {
   user-select: none;
 }
 
-header .decorative-circle {
+#header .decorative-circle {
   width: 50rem;
   height: 50rem;
   border-radius: 50%;
@@ -376,17 +417,17 @@ header .decorative-circle {
   z-index: -1;
 }
 @media only screen and (max-width: 75em) {
-  header .decorative-circle {
+  #header .decorative-circle {
     top: 15%;
   }
 }
 @media only screen and (max-width: 56.25em) {
-  header .decorative-circle {
+  #header .decorative-circle {
     display: none;
   }
 }
 
-header .decorative-lines {
+#header .decorative-lines {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -397,7 +438,7 @@ header .decorative-lines {
   transform: translateY(-50%);
   z-index: 1;
 }
-header .decorative-lines .line {
+#header .decorative-lines .line {
   width: 100%;
   height: 1rem;
   background-color: #0074d9;
@@ -411,33 +452,37 @@ header .decorative-lines .line {
   position: absolute;
   z-index: -1;
 }
-@media only screen and (max-width: 56.25em) {
-  #about .decorative-circle {
-    display: none;
-  }
-}
 
 #about .decorative-circle:nth-of-type(1) {
   width: 50rem;
   height: 50rem;
   background-image: radial-gradient(closest-side, #6c3300, #050505);
   left: 0;
-  top: 30%;
+  top: 35%;
+}
+@media only screen and (max-width: 56.25em) {
+  #about .decorative-circle:nth-of-type(1) {
+    top: 60%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  #about .decorative-circle:nth-of-type(1) {
+    width: 40rem;
+    height: 40rem;
+  }
 }
 
 #about .decorative-circle:nth-of-type(2) {
   width: 60rem;
   height: 60rem;
   background-image: radial-gradient(closest-side, #00325e, #050505);
-  right: 0;
+  right: 5%;
+  bottom: 0;
 }
-
-#about .decorative-circle:nth-of-type(3) {
-  width: 50rem;
-  height: 50rem;
-  background-image: radial-gradient(closest-side, #00325e, #050505);
-  top: -30%;
-  left: 30%;
+@media only screen and (max-width: 75em) {
+  #about .decorative-circle:nth-of-type(2) {
+    top: 0;
+  }
 }
 
 .nav__hamburger {
