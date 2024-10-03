@@ -22,13 +22,13 @@ $color-dark-2: #1a1a1a95;
 $color-dark-transparent-1: rgba(0, 0, 0, 0.75);
 $color-dark-transparent-2: rgba(0, 0, 0, 0);
 
-$section-margin-small: 0 6em;
-$section-margin-medium: 0 8em;
-$section-margin-big: 0 10em;
+$margin-small: 10rem;
+$margin-medium: 14rem;
+$margin-large: 18rem;
 
-$section-padding-small: 0 6em;
-$section-padding-medium: 0 8em;
-$section-padding-big: 0 10em;
+$padding-small: 10rem;
+$padding-medium: 14rem;
+$padding-large: 18rem;
 
 // Stacking context layers
 $primary-layer: 2;
@@ -37,3 +37,7 @@ $tertiary-layer: -1;
 
 $main-heading-large: 12rem;
 $main-heading-medium: 10rem;
+
+$decorative-circle-large: 60rem;
+$decorative-circle-medium: 50rem;
+$decorative-circle-small: 40rem;
