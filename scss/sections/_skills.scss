@@ -1,6 +1,13 @@
 .skills {
   margin-top: 15rem;
   padding: 0 $padding-large;
+  position: relative;
+  background-image: url("../../images/earth-image.jpg");
+  background-size: cover;
+  background-position: top 15% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: $tertiary-layer;
 
   @include respond(tab-port) {
     padding: 10rem $padding-medium 0;
@@ -32,7 +39,7 @@
     }
 
     i {
-      color: $color-primary;
+      color: $color-secondary;
     }
   }
 
@@ -51,6 +58,9 @@
 
       &--image {
         height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         img {
           height: 100%;
@@ -58,8 +68,9 @@
 
         figcaption {
           font-size: 2.4rem;
-          text-align: center;
           color: $color-grey-dark;
+          font-family: "Exo", sans-serif;
+          font-weight: 600;
         }
       }
 
@@ -72,7 +83,7 @@
           width: 2.2rem;
           height: 2.2rem;
           border-radius: 50%;
-          background-color: $color-primary-blur-1;
+          background-color: $color-secondary-blur-1;
         }
       }
     }
