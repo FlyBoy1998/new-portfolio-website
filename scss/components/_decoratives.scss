@@ -1,6 +1,6 @@
-header .decorative-circle {
-  width: 50rem;
-  height: 50rem;
+#header .decorative-circle {
+  width: $decorative-circle-medium;
+  height: $decorative-circle-medium;
   border-radius: 50%;
   background-image: radial-gradient(
     closest-side,
@@ -20,7 +20,7 @@ header .decorative-circle {
   }
 }
 
-header .decorative-lines {
+#header .decorative-lines {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,43 +45,40 @@ header .decorative-lines {
   border-radius: 50%;
   position: absolute;
   z-index: $tertiary-layer;
-
-  @include respond(tab-port) {
-    display: none;
-  }
 }
 
 #about .decorative-circle:nth-of-type(1) {
-  width: 50rem;
-  height: 50rem;
+  width: $decorative-circle-medium;
+  height: $decorative-circle-medium;
   background-image: radial-gradient(
     closest-side,
     $color-secondary-blur-2,
     $color-dark-1
   );
   left: 0;
-  top: 30%;
+  top: 35%;
+
+  @include respond(tab-port) {
+    top: 60%;
+  }
+  @include respond(phone) {
+    width: $decorative-circle-small;
+    height: $decorative-circle-small;
+  }
 }
 
 #about .decorative-circle:nth-of-type(2) {
-  width: 60rem;
-  height: 60rem;
+  width: $decorative-circle-large;
+  height: $decorative-circle-large;
   background-image: radial-gradient(
     closest-side,
     $color-primary-blur-1,
     $color-dark-1
   );
-  right: 0;
-}
+  right: 5%;
+  bottom: 0;
 
-#about .decorative-circle:nth-of-type(3) {
-  width: 50rem;
-  height: 50rem;
-  background-image: radial-gradient(
-    closest-side,
-    $color-primary-blur-1,
-    $color-dark-1
-  );
-  top: -30%;
-  left: 30%;
+  @include respond(tab-land) {
+    top: 0;
+  }
 }
