@@ -69,7 +69,7 @@ header .nav {
   display: flex;
   align-items: center;
   background-color: #050505;
-  margin: 0 10rem;
+  margin: 0 8rem;
   color: #fff;
   min-height: 5rem;
   padding: 0.7rem 0.7rem 0.7rem 3rem;
@@ -183,14 +183,14 @@ header .hero {
 @media only screen and (max-width: 56.25em) {
   header .hero {
     width: 85%;
-    padding: 10rem 14rem 0;
+    padding: 10rem 12rem 0;
     justify-content: center;
   }
 }
 @media only screen and (max-width: 37.5em) {
   header .hero {
     width: 100%;
-    padding: 10rem 10rem 0;
+    padding: 10rem 8rem 0;
   }
 }
 header .hero__profession {
@@ -295,8 +295,8 @@ header .hero__download-cv:hover {
   background-color: #ff851b;
 }
 header .hero__download-cv:hover::before {
-  width: 17.2rem;
-  height: 17.2rem;
+  width: 17.6rem;
+  height: 17.6rem;
 }
 header .hero__download-cv:hover::after {
   width: 22.6rem;
@@ -319,13 +319,13 @@ header .hero__download-cv:hover::after {
 }
 @media only screen and (max-width: 56.25em) {
   .about {
-    padding: 10rem 14rem 0;
+    padding: 10rem 12rem 0;
+    margin-top: 0;
   }
 }
 @media only screen and (max-width: 37.5em) {
   .about {
-    padding: 10rem 10rem 0;
-    margin-top: 0;
+    padding: 10rem 8rem 0;
   }
 }
 .about__content {
@@ -407,14 +407,105 @@ header .hero__download-cv:hover::after {
   user-select: none;
 }
 
+.skills {
+  margin-top: 15rem;
+  padding: 0 18rem;
+  position: relative;
+  background-image: url("../../images/earth-image.jpg");
+  background-size: cover;
+  background-position: top 15% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+}
+@media only screen and (max-width: 56.25em) {
+  .skills {
+    padding: 10rem 12rem 0;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .skills {
+    padding: 10rem 8rem 0;
+  }
+}
+.skills__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12rem;
+  color: #eee;
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+  word-wrap: unset;
+  text-wrap: nowrap;
+}
+@media only screen and (max-width: 37.5em) {
+  .skills__title {
+    text-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .skills__title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.skills__title i {
+  color: #e36a00;
+}
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 4rem;
+  margin-top: 10rem;
+  justify-items: center;
+}
+.skills__container--box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-items: center;
+}
+.skills__container--box--image {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__container--box--image img {
+  height: 100%;
+}
+.skills__container--box--image figcaption {
+  font-size: 2.4rem;
+  color: #fff;
+  font-family: "Exo", sans-serif;
+  font-weight: 600;
+}
+.skills__container--box--level {
+  display: flex;
+  margin-top: 2rem;
+  gap: 1.8rem;
+}
+.skills__container--box--level--bullet {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background-color: #7d4819;
+}
+
+#about .decorative-circle,
+#skills .decorative-circle, #header .decorative-circle {
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
 #header .decorative-circle {
   width: 50rem;
   height: 50rem;
-  border-radius: 50%;
   background-image: radial-gradient(closest-side, #00325e, #050505);
-  position: absolute;
   top: 15%;
-  z-index: -1;
 }
 @media only screen and (max-width: 75em) {
   #header .decorative-circle {
@@ -447,12 +538,6 @@ header .hero__download-cv:hover::after {
   border-bottom-right-radius: 1rem;
 }
 
-#about .decorative-circle {
-  border-radius: 50%;
-  position: absolute;
-  z-index: -1;
-}
-
 #about .decorative-circle:nth-of-type(1) {
   width: 50rem;
   height: 50rem;
@@ -460,15 +545,9 @@ header .hero__download-cv:hover::after {
   left: 0;
   top: 35%;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 75em) {
   #about .decorative-circle:nth-of-type(1) {
-    top: 60%;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  #about .decorative-circle:nth-of-type(1) {
-    width: 40rem;
-    height: 40rem;
+    display: none;
   }
 }
 
@@ -476,7 +555,7 @@ header .hero__download-cv:hover::after {
   width: 60rem;
   height: 60rem;
   background-image: radial-gradient(closest-side, #00325e, #050505);
-  right: 5%;
+  right: 0;
   bottom: 0;
 }
 @media only screen and (max-width: 75em) {

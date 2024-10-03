@@ -3,8 +3,9 @@
 
 @import "./base/base";
 
-@import "./layout/header";
-@import "./layout/about";
+@import "./sections/header";
+@import "./sections/about";
+@import "./sections/skills";
 
 @import "./components/decoratives";
 @import "./components/hamburger-btn";
