@@ -33,7 +33,7 @@ header {
     display: flex;
     align-items: center;
     background-color: $color-dark-1;
-    margin: $section-margin-small;
+    margin: 0 $margin-small;
     color: $color-white;
     min-height: 5rem;
     padding: 0.7rem 0.7rem 0.7rem 3rem;
@@ -42,6 +42,10 @@ header {
 
     @include respond(tab-port) {
       padding-right: 3rem;
+    }
+
+    @include respond(phone) {
+      padding: 0 1rem;
     }
 
     &__logo {
@@ -141,19 +145,22 @@ header {
     flex-direction: column;
     position: relative;
     width: 100%;
-    padding: $section-margin-big;
-    margin-top: 10rem;
+    min-height: 75vh;
+    padding: 10rem $padding-large;
+
+    @include respond(tab-land) {
+      gap: 1.8rem;
+    }
 
     @include respond(tab-port) {
-      width: 70%;
-      margin: $section-margin-medium;
-      padding: 0;
-      margin-top: 10rem;
+      width: 85%;
+      padding: 10rem $padding-medium 0;
+      justify-content: center;
     }
 
     @include respond(phone) {
-      margin: $section-margin-small;
-      margin-top: 10rem;
+      width: 100%;
+      padding: 10rem $padding-small 0;
     }
 
     &__profession {
@@ -197,11 +204,11 @@ header {
       }
 
       @include respond(tab-port) {
-        width: 75%;
+        width: 80%;
       }
 
       @include respond(phone) {
-        width: 80%;
+        width: 100%;
       }
     }
 
@@ -211,11 +218,11 @@ header {
       align-items: center;
       justify-content: center;
       position: absolute;
-      width: 3.15em;
-      height: 3.15em;
+      width: 12rem;
+      height: 12rem;
       border-radius: 50%;
       background-color: $color-secondary;
-      top: 25%;
+      top: 35%;
       left: 45%;
       color: $color-grey-light;
       font-size: 3.8rem;
@@ -224,16 +231,11 @@ header {
       transition: all 0.35s ease-out;
 
       @include respond(tab-land) {
-        left: 50%;
+        left: 60%;
       }
 
       @include respond(tab-port) {
-        left: 70%;
-      }
-
-      @include respond(phone) {
-        left: 0;
-        top: 110%;
+        display: none;
       }
 
       i {
@@ -249,15 +251,15 @@ header {
       }
 
       &::before {
-        width: 4em;
-        height: 4em;
+        width: 15.2rem;
+        height: 15.2rem;
         background-color: $color-secondary-transparent-1;
         z-index: $tertiary-layer;
       }
 
       &::after {
-        width: 4.8em;
-        height: 4.8em;
+        width: 18.6rem;
+        height: 18.6rem;
         background-color: $color-secondary-transparent-2;
         z-index: $tertiary-layer;
       }
@@ -267,13 +269,13 @@ header {
       }
 
       &:hover::before {
-        width: 4.5em;
-        height: 4.5em;
+        width: 17.2rem;
+        height: 17.2rem;
       }
 
       &:hover::after {
-        width: 5.6em;
-        height: 5.6em;
+        width: 22.6rem;
+        height: 22.6rem;
       }
     }
   }
