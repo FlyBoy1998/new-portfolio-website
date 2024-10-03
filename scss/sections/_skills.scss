@@ -1,0 +1,80 @@
+.skills {
+  margin-top: 15rem;
+  padding: 0 $padding-large;
+
+  @include respond(tab-port) {
+    padding: 10rem $padding-medium 0;
+    margin-top: 0;
+  }
+
+  @include respond(phone) {
+    padding: 10rem $padding-small 0;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $main-heading-large;
+    color: $color-grey-light;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    word-wrap: unset;
+    text-wrap: nowrap;
+
+    @include respond(phone) {
+      text-wrap: wrap;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    i {
+      color: $color-primary;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 4rem;
+    margin-top: 10rem;
+    justify-items: center;
+
+    &--box {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      align-items: center;
+
+      &--image {
+        height: 10rem;
+
+        img {
+          height: 100%;
+        }
+
+        figcaption {
+          font-size: 2.4rem;
+          text-align: center;
+          color: $color-grey-dark;
+        }
+      }
+
+      &--level {
+        display: flex;
+        margin-top: 2rem;
+        gap: 1.8rem;
+
+        &--bullet {
+          width: 2.2rem;
+          height: 2.2rem;
+          border-radius: 50%;
+          background-color: $color-primary-blur-1;
+        }
+      }
+    }
+  }
+}

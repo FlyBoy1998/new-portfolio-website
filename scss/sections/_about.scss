@@ -1,0 +1,108 @@
+.about {
+  display: flex;
+  gap: 5rem;
+  position: relative;
+  margin-top: 15rem;
+  padding: 0 $padding-large;
+  width: 100%;
+
+  @include respond(tab-land) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem $padding-medium 0;
+    margin-top: 0;
+  }
+
+  @include respond(phone) {
+    padding: 10rem $padding-small 0;
+  }
+
+  &__content {
+    flex: 0 1 50%;
+
+    &--title {
+      display: flex;
+      flex-direction: column;
+      font-size: $main-heading-large;
+      color: $color-grey-light;
+      font-family: "Exo", sans-serif;
+      font-weight: 500;
+      position: relative;
+      left: -35%;
+
+      @include respond(tab-land) {
+        left: 0;
+      }
+
+      span:nth-child(2) {
+        margin-top: -5rem;
+      }
+
+      i {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        color: $color-primary;
+      }
+    }
+
+    &--description {
+      font-family: "Roboto", sans-serif;
+      color: $color-grey-dark;
+      line-height: 1.6;
+      letter-spacing: 1.1px;
+    }
+
+    &--contact-btn {
+      display: inline-block;
+      margin-top: 5rem;
+      padding: 1em 3em;
+      border-radius: 4rem;
+      color: $color-grey-light;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-decoration: none;
+      background-color: $color-primary;
+      transition: background-color 0.25s linear;
+
+      &:visited,
+      &:link {
+        text-decoration: none;
+        color: $color-grey-light;
+      }
+
+      &:hover,
+      &:active {
+        background-color: $color-primary-light;
+      }
+    }
+  }
+
+  &__image-container {
+    height: 54rem;
+    border-radius: 50%;
+
+    @include respond(tab-land) {
+      height: 48rem;
+    }
+
+    @include respond(tab-port) {
+      height: 40rem;
+    }
+
+    @include respond(phone) {
+      height: 32rem;
+    }
+
+    &--image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      user-select: none;
+    }
+  }
+}
