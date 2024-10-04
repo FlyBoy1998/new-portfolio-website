@@ -69,7 +69,7 @@ header .nav {
   display: flex;
   align-items: center;
   background-color: #050505;
-  margin: 0 8rem;
+  margin: 0 6rem;
   color: #fff;
   min-height: 5rem;
   padding: 0.7rem 0.7rem 0.7rem 3rem;
@@ -190,7 +190,7 @@ header .hero {
 @media only screen and (max-width: 37.5em) {
   header .hero {
     width: 100%;
-    padding: 10rem 8rem 0;
+    padding: 10rem 6rem 0;
   }
 }
 header .hero__profession {
@@ -325,11 +325,16 @@ header .hero__download-cv:hover::after {
 }
 @media only screen and (max-width: 37.5em) {
   .about {
-    padding: 10rem 8rem 0;
+    padding: 10rem 6rem 0;
   }
 }
 .about__content {
   flex: 0 1 50%;
+}
+@media only screen and (max-width: 56.25em) {
+  .about__content {
+    width: 100%;
+  }
 }
 .about__content--title {
   display: flex;
@@ -346,8 +351,23 @@ header .hero__download-cv:hover::after {
     left: 0;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  .about__content--title {
+    font-size: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .about__content--title {
+    font-size: 8rem;
+  }
+}
 .about__content--title span:nth-child(2) {
   margin-top: -5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .about__content--title span:nth-child(2) {
+    margin-top: -2.5rem;
+  }
 }
 .about__content--title i {
   position: absolute;
@@ -426,7 +446,7 @@ header .hero__download-cv:hover::after {
 }
 @media only screen and (max-width: 37.5em) {
   .skills {
-    padding: 10rem 8rem 0;
+    padding: 10rem 6rem 0;
   }
 }
 .skills__title {
@@ -440,15 +460,17 @@ header .hero__download-cv:hover::after {
   word-wrap: unset;
   text-wrap: nowrap;
 }
-@media only screen and (max-width: 37.5em) {
-  .skills__title {
-    text-wrap: wrap;
-  }
-}
 @media only screen and (max-width: 56.25em) {
   .skills__title {
     flex-direction: column;
     align-items: flex-start;
+    font-size: 10rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .skills__title {
+    text-wrap: wrap;
+    font-size: 8rem;
   }
 }
 .skills__title i {
@@ -460,6 +482,11 @@ header .hero__download-cv:hover::after {
   gap: 4rem;
   margin-top: 10rem;
   justify-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .skills__container {
+    margin-top: 5rem;
+  }
 }
 .skills__container--box {
   display: flex;
@@ -536,6 +563,11 @@ header .hero__download-cv:hover::after {
   transform: skew(0deg, 45deg);
   border-top-right-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  #header .decorative-lines {
+    display: none;
+  }
 }
 
 #about .decorative-circle:nth-of-type(1) {
